@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    withEnv(['PATH+COMPOSER=C:\\path\\to\\composer']) {
-        bat 'composer install'
-    }
-    
     stages {
         stage('Clone') {
             steps {
