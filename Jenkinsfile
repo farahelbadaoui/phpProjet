@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building de l'application..."
-                bat 'composer install'
+                sh 'composer install'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo "Building l'image docker..."
                 script {
-                    bat 'docker build -t farahfrh/projetdevops .'
+                    sh 'docker build -t farahfrh/projetdevops .'
                 }
             }
         }
@@ -33,8 +33,8 @@ pipeline {
             steps {
                 echo "Push de l'image docker..."
                 script {
-                    bat "docker login -u farahfrh -p farah12345"
-                        bat 'docker push farahfrh/projetdevops'
+                    sh "docker login -u farahfrh -p farah12345"
+                    sh 'docker push farahfrh/projetdevops'
                     }
             }
         }
