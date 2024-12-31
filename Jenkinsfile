@@ -12,6 +12,12 @@ pipeline {
                 )
             }
         }
+        stage('Verify PHP') {
+            steps {
+                bat 'php --version'
+            }
+        }
+
         stage('Install Composer') {
             steps {
                 bat 'php -r "copy(\'https://getcomposer.org/installer\', \'composer-setup.php\');"'
