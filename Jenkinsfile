@@ -14,8 +14,7 @@ pipeline {
         }
         stage('Verify PHP') {
             steps {
-                bat 'php --version'
-            }
+                bat 'php --version'            }
         }
 
         stage('Install Composer') {

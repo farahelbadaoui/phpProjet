@@ -1,17 +1,4 @@
 
-<?php
-include_once('hms/include/config.php');
-if(isset($_POST['submit']))
-{
-$name=$_POST['fullname'];
-$email=$_POST['emailid'];
-$mobileno=$_POST['mobileno'];
-$dscrption=$_POST['description'];
-$query=mysqli_query($con,"insert into tblcontactus(fullname,email,contactno,message) value('$name','$email','$mobileno','$dscrption')");
-echo "<script>alert('Your information succesfully submitted');</script>";
-echo "<script>window.location.href ='index.php'</script>";
-
-} ?>
 <!doctype html>
 <html lang="en">
 
@@ -259,10 +246,7 @@ echo "<script>window.location.href ='index.php'</script>";
             </div>
             <div class="col-sm-6 abut-yoiu">
                 <h3>About Our Hospital</h3>
-<?php
-$ret=mysqli_query($con,"select * from tblpage where PageType='aboutus' ");
-while ($row=mysqli_fetch_array($ret)) {
-?>
+
 
     <p><?php  echo $row['PageDescription'];?>.</p><?php } ?>
             </div>
