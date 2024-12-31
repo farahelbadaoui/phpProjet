@@ -248,7 +248,7 @@
                 <h3>About Our Hospital</h3>
 
 
-    <p><?php  echo $row['PageDescription'];?>.</p><?php } ?>
+    
             </div>
         </div>
     </section>    
